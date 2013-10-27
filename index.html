@@ -1,0 +1,141 @@
+<!doctype html>
+<html class=' en' lang='en'>
+<head>
+	<title>Brendan Quinn</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/960_12_col.css">
+	<link rel="icon" 
+		  type="image/x-icon"
+		  href="img/favicon.ico" >
+
+
+	<script src="js/jquery-1.10.2.js"></script>
+	<script>
+		$(function() {
+			var focused = "index";
+			var pages = [
+				"index",
+				"about",
+				"work",
+				"contact",
+				"resume"
+			];
+
+			for (var i = 0; i < pages.length; i++) {
+				(function(page) {
+					$("." + page + "-link").click(function(ev) {
+						console.log("click for " + page + " link");
+						$("#" + focused + "-page").removeClass("focused");
+						$("#" + page + "-page").addClass("focused");
+						focused = page;
+						ev.preventDefault();
+					});
+				})(pages[i]);
+			}
+		});
+	</script>
+</head>
+	<body>
+
+	<div>
+		<div id="header"> 
+		<h3>Brendan Quinn</h3>	
+			<nav>
+				<ul>
+					<li><a class="about-link" href="about.html">About</a></li>
+					<li><a class="work-link" href="work.html">Work/Projects</a></li>
+					<li><a class="contact-link" href="contact.html">Contact</a></li>
+					<li><a class="resume-link" href="resume.html">Resume/CV</a></li>
+				</ul>
+			</nav>
+			<footer>
+		<p>©2013 Brendan Quinn. All rights reserved.</p>
+	</footer>	
+		</div>
+
+		<div id="maintext">
+			<div id="about-page" class="page grid_12">
+				<h1>About</h1>
+				<div class="grid_4">
+				<h2 class="about-titles">Facts</h2>
+			<ul>
+				<li>I was born in Flemington NJ</li>
+				<li> I studied in Allentown, PA</li>
+				<li>I like turtles</li>
+				<li>I have an extensive CD collection</li>
+
+			</ul>
+			</div>
+
+			<div class="grid_4">
+			<h2>Skills</h2>
+			<ul>
+				<li>Product Management</li>
+				<li>Mobile</li>
+				<li>Front-End Development</li>
+				<li>User Testing</li>
+				<li>UX/UI</li>
+
+			</ul>
+			</div>
+
+			<div class="grid_4">
+			<h2>Interests</h2>
+			<ul>
+				<li>eHealthcare</li>
+				<li>Hiking</li>
+				<li>Traveling</li>
+				<li>UX/UI Design</li>
+				<li>Web Development</li>
+				<li>Culture</li>
+				<li>Music/Music Industry</li>
+
+			</ul>
+			</div>
+
+
+			
+
+			</div>
+			
+			<div id="work-page" class="page">
+				<h1>Work and Projects</h1>
+				<p>Here are some projects that I have worked on in the past and what I am currently active in</p>
+				
+				<img id="archifyworkpage" src="http://iyaan.info/wp-content/plugins/rss-poster/cache/a4c63_archify-logo.jpg" alt="archifyscreenshot">
+
+				<img id="musicoevworkpage" src="https://si0.twimg.com/profile_images/1650401469/Musicoev_logo.jpg" alt="musicoevscreenshot">
+
+				<img id="blippexworkpage" src="http://dribbble.s3.amazonaws.com/users/20072/screenshots/1160593/blippex_1x.jpg" alt="blippexscreenshot">
+
+			</div>
+			<div id="contact-page" class="page">
+				<h1>Let's get in touch!</h1>
+
+				<a href="https://twitter.com/brendnq">
+				<img id="twittercontactimage" style="height: 150px; width:150px" src="img/twitter.png" alt="twitterlogo">
+				</a>
+				<a href="https://linkedin.com/in/brendanmquinn">
+				<img id="linkedincontactimage" style="height: 150px; width:150px" src="img/linkedin.png" alt="linkedinlogo">
+				</a>
+				
+				<a href="mailto:brendanquinn89@gmail.com">
+				<img id="mailcontactimage" style="height: 150px; width:150px" src="img/email.png" alt="emailicon">
+				</a>
+				
+			</div>
+			<div id="resume-page" class="page">
+	
+				<p>
+				<a href="https://docs.google.com/document/d/1c9Cs7njCq8qz8Mu8QMCUFnPhn5GEZPoK4Gyq36eyM9I/edit?usp=sharing">Please click here</a> to view my Resume/CV
+				</p>
+			</div>
+		</div>
+	</div>
+
+	
+
+	</body>
+</html>
